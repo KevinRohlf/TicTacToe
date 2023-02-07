@@ -18,6 +18,7 @@ td:hover {
     background-color: rgba(0, 0, 0, 0.1);
     transition: all ease-in-out 125ms;
 }
+
 table tr:first-child td {
     border-top: 0;
 }
