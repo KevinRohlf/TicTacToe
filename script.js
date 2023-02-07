@@ -7,7 +7,6 @@ function fillShape(id) {
     if (!fields[id] && !gameOver) {
         fields[id] = currentShape;
         changeShape();
-        console.log(fields)
         draw();
         checkForWin();
     }
@@ -80,7 +79,6 @@ function checkForWin() {
     }
 
     if (winner) {
-        console.log('der Gewinner ist ' + winner)
         gameOver = true;
         setTimeout(function () {
             document.getElementById('game-over').classList.remove('d-none')
