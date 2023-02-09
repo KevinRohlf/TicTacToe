@@ -82,6 +82,7 @@ function checkForWin() {
         gameOver = true;
         setTimeout(function () {
             document.getElementById('game-over').classList.remove('d-none')
+            showWinner(winner);
             document.getElementById('restart-btn').classList.remove('d-none');
         }, 1000)
 
@@ -103,4 +104,13 @@ function restart() {
         document.getElementById('circle-' + i).classList.add('d-none')
     }
 
+}
+
+function showWinner(winner) {
+    if (winner == 'cross'){
+        document.getElementById('game-over').innerHTML = `Kreuz hat Gewonnen`
+    } else {
+        document.getElementById('game-over').innerHTML = `Kreis hat Gewonnen`
+    }
+    
 }
